@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AXMagicIdentifiers/UIViewController+MagicId.h>
 
 @interface AXViewController : UIViewController
 

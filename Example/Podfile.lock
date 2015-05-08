@@ -1,0 +1,20 @@
+PODS:
+  - AXMagicIdentifiers (0.1.0)
+  - FBSnapshotTestCase (1.8.1)
+  - Kiwi (2.3.1)
+
+DEPENDENCIES:
+  - AXMagicIdentifiers (from `../`)
+  - FBSnapshotTestCase
+  - Kiwi
+
+EXTERNAL SOURCES:
+  AXMagicIdentifiers:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AXMagicIdentifiers: eb906938779770f4f1f286d720685b237429eaa3
+  FBSnapshotTestCase: 3dc3899168747a0319c5278f5b3445c13a6532dd
+  Kiwi: f038a6c61f7a9e4d7766bff5717aa3b3fdb75f55
+
+COCOAPODS: 0.37.1
