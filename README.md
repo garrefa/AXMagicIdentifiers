@@ -7,7 +7,7 @@
 
 ## Usage
 
-Just do '#import <AXMagicIdentifiers.h>' in your pch file and you are done.
+Just do '#import \<AXMagicIdentifiers.h\>' in your pch file and you are done.
 
 From now on, lets call accessibilityIdentifier property as accID.
 
