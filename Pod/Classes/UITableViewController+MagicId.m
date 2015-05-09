@@ -7,6 +7,7 @@
 //
 
 #import "UITableViewController+MagicId.h"
+#import "UIViewController+MagicId.h"
 #import <objc/runtime.h>
 
 @implementation UITableViewController (MagicId)
@@ -45,11 +46,23 @@
 - (UITableViewCell *)ax_tableView:(UITableView *)tableView
             cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
+    __weak typeof(self) weakSelf = self;
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        
+        __strong typeof(self) self = weakSelf;
+        
+        self.ax_prefix = NSStringFromClass(self.class);
+        NSString *viewId = [@"" stringByAppendingFormat:@"%@_VIEW",self.ax_prefix];
+        self.view.accessibilityIdentifier = viewId;
+    });
+    
     UITableViewCell *cell =
     [self ax_tableView:tableView cellForRowAtIndexPath:indexPath];
-    
+
     cell.accessibilityIdentifier =
-    [@"" stringByAppendingFormat:@"S%dR%d",indexPath.section,indexPath.row];
+    [self.ax_prefix stringByAppendingFormat:@"_CELL_S%dR%d",indexPath.section,indexPath.row];
     
     return cell;
 }

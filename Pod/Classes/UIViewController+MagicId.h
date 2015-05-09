@@ -10,6 +10,8 @@
 
 @interface UIViewController (MagicId)
 
+@property (nonatomic, copy, setter = ax_setPrefix:) NSString *ax_prefix;
+
 - (void)ax_printAccessibilityIdentifiers;
 
 @end

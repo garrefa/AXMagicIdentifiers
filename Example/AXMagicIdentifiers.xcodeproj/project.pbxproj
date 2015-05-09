@@ -22,8 +22,8 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		ACDA38B31AFE5F6E006710B4 /* Main.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACDA38B21AFE5F6E006710B4 /* Main.Storyboard */; };
-		ACDA38B61AFE6755006710B4 /* UIViewController+Magical.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDA38B51AFE6755006710B4 /* UIViewController+Magical.m */; };
 		ACDA38B91AFE7047006710B4 /* AXBtnsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDA38B81AFE7047006710B4 /* AXBtnsViewController.m */; };
+		ACDA38C01AFE7D02006710B4 /* AXTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDA38BF1AFE7D02006710B4 /* AXTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,10 +61,10 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		A3E34BCDBCA867A56CDACF58 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		ACDA38B21AFE5F6E006710B4 /* Main.Storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.Storyboard; sourceTree = "<group>"; };
-		ACDA38B41AFE6755006710B4 /* UIViewController+Magical.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Magical.h"; sourceTree = "<group>"; };
-		ACDA38B51AFE6755006710B4 /* UIViewController+Magical.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Magical.m"; sourceTree = "<group>"; };
 		ACDA38B71AFE7047006710B4 /* AXBtnsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXBtnsViewController.h; sourceTree = "<group>"; };
 		ACDA38B81AFE7047006710B4 /* AXBtnsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXBtnsViewController.m; sourceTree = "<group>"; };
+		ACDA38BE1AFE7D02006710B4 /* AXTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXTableViewController.h; sourceTree = "<group>"; };
+		ACDA38BF1AFE7D02006710B4 /* AXTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXTableViewController.m; sourceTree = "<group>"; };
 		CAC7C2062C320AF09513947B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		CE7930FE8A70B9128D9AA84C /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D8FD0B2D32406D3B9DBFA9D5 /* Pods-AXMagicIdentifiers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AXMagicIdentifiers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AXMagicIdentifiers/Pods-AXMagicIdentifiers.debug.xcconfig"; sourceTree = "<group>"; };
@@ -135,10 +135,10 @@
 			children = (
 				6003F59C195388D20070C39A /* AXAppDelegate.h */,
 				6003F59D195388D20070C39A /* AXAppDelegate.m */,
-				ACDA38B41AFE6755006710B4 /* UIViewController+Magical.h */,
-				ACDA38B51AFE6755006710B4 /* UIViewController+Magical.m */,
 				ACDA38B71AFE7047006710B4 /* AXBtnsViewController.h */,
 				ACDA38B81AFE7047006710B4 /* AXBtnsViewController.m */,
+				ACDA38BE1AFE7D02006710B4 /* AXTableViewController.h */,
+				ACDA38BF1AFE7D02006710B4 /* AXTableViewController.m */,
 				ACDA38B21AFE5F6E006710B4 /* Main.Storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -364,8 +364,8 @@
 			files = (
 				ACDA38B91AFE7047006710B4 /* AXBtnsViewController.m in Sources */,
 				6003F59E195388D20070C39A /* AXAppDelegate.m in Sources */,
+				ACDA38C01AFE7D02006710B4 /* AXTableViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				ACDA38B61AFE6755006710B4 /* UIViewController+Magical.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

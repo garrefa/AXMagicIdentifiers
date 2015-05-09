@@ -10,14 +10,7 @@
 
 #import <objc/runtime.h>
 
-@interface UIViewController (_MagicId)
-
-@property (nonatomic, copy, setter = ax_setPrefix:) NSString *ax_prefix;
-
-@end
-
 @implementation UIViewController (_MagicId)
-@dynamic ax_prefix;
 
 - (NSString *)ax_prefix {
     
@@ -32,6 +25,7 @@
 @end
 
 @implementation UIViewController (MagicId)
+@dynamic ax_prefix;
 
 + (void)load {
     

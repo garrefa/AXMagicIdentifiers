@@ -1,5 +1,5 @@
 //
-//  UIViewController+Magical.h
+//  AXTableViewController.h
 //  AXMagicIdentifiers
 //
 //  Created by Alexandre Garrefa on 5/9/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIViewController (Magical)
+@interface AXTableViewController : UITableViewController
 
 @end

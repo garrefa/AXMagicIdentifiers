@@ -13,5 +13,5 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
-    #import <AXMagicIdentifiers/AXMAgicIdentifiers.h>
+    #import <AXMagicIdentifiers.h>
 #endif
