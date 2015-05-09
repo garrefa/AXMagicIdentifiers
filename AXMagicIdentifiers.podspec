@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "AXMagicIdentifiers"
-  s.version          = "v0.1.1"
+  s.version          = "v0.1.0"
   s.summary          = "UIViewController category that automagically adds accessibility identifiers to top level views and all UIButtons."
   s.homepage         = "https://github.com/garrefa/AXMagicIdentifiers"
   s.license          = 'MIT'
