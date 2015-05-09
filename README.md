@@ -8,8 +8,10 @@
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
+Just do 'pod install' and add 'UIViewController+MagicId.h' to your pch file and you are done.
 
-## Requirements
+Top level views will have accessibilityIdentifiers set as 'CLASS_NAME'_VIEW .
+All buttons inside main view or any subview will have accessibilityIdentifiers set as 'CLASS_NAME'_BUTTON_'BUTTON_TITLE'.
 
 ## Installation
 
