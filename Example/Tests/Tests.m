@@ -12,29 +12,30 @@ describe(@"My initial tests", ^{
 
   context(@"will fail", ^{
 
-      it(@"can do maths", ^{
+      xit(@"can do maths", ^{
           [[@1 should] equal:@2];
       });
-
-      it(@"can read", ^{
+      
+      xit(@"can read", ^{
           [[@"number" should] equal:@"string"];
       });
-    
-      it(@"will wait and fail", ^{
+      
+      xit(@"will wait and fail", ^{
           NSObject *object = [[NSObject alloc] init];
           [[expectFutureValue(object) shouldEventually] receive:@selector(autoContentAccessingProxy)];
       });
+
   });
 
   context(@"will pass", ^{
     
-      it(@"can do maths", ^{
+      xit(@"can do maths", ^{
         [[@1 should] beLessThan:@23];
       });
     
-      it(@"can read", ^{
+      xit(@"can read", ^{
           [[@"team" shouldNot] containString:@"I"];
-      });  
+      });
   });
   
 });
