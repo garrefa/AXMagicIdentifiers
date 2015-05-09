@@ -7,9 +7,17 @@
 
 ## Usage
 
-Top level views will have accessibilityIdentifiers set as 'CLASS_NAME'_VIEW .
+Just do '#import <AXMagicIdentifiers.h>' in your pch file and you are done.
 
-All buttons inside main view or any subview will have accessibilityIdentifiers set as 'CLASS_NAME'_BUTTON_'BUTTON_TITLE'.
+From now on, lets call accessibilityIdentifier property as accID.
+
+What this does:
+
+- ax_printAccessibilityIdentifiers: Util method for UIViewController and subclasses to print all accIDs in the view hierarchy.
+- Top levem UIViews have accID set as 'CLASS_NAME'_VIEW.
+- UIButtons have accID set as 'CLASS_NAME'_BUTTON_'BUTTON_TITLE'.
+- UITableViewCells have accID set as 'CLASS_NAME'_CELL_S'SECTION_NUMBER'R'ROW_NUMBER'.
+
 
 Supports iOS >= 7.0
 
@@ -24,7 +32,8 @@ pod "AXMagicIdentifiers"
 
 ## Next Releases
 
-Support for UITextFields, UISwitches, UITableViewCells, UICollectionViewCells, UIPickerView and other elements in the way.
+- Support for UITextFields, UISwitches, UICollectionViewCells, UIPickerView and other elements in the way.
+- Updated accID if button text changes
 
 ## Author
 
