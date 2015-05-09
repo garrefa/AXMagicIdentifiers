@@ -62,7 +62,7 @@
     [self ax_tableView:tableView cellForRowAtIndexPath:indexPath];
 
     cell.accessibilityIdentifier =
-    [self.ax_prefix stringByAppendingFormat:@"_CELL_S%dR%d",indexPath.section,indexPath.row];
+    [self.ax_prefix stringByAppendingFormat:@"_CELL_S%ldR%ld",(long)indexPath.section,(long)indexPath.row];
     
     return cell;
 }
