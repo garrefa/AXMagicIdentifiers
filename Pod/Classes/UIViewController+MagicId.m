@@ -39,8 +39,8 @@
     dispatch_once(&onceToken, ^{
         Class class = [self class];
         
-        SEL originalSelector = @selector(viewWillAppear:);
-        SEL swizzledSelector = @selector(ax_viewWillAppear:);
+        SEL originalSelector = @selector(viewDidLayoutSubviews);
+        SEL swizzledSelector = @selector(ax_viewDidLayoutSubviews);
         
         Method originalMethod = class_getInstanceMethod(class, originalSelector);
         Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
@@ -64,12 +64,14 @@
 
 #pragma mark - Method Swizzling
 
-- (void)ax_viewWillAppear:(BOOL)animated {
+- (void)ax_viewDidLayoutSubviews {
     
-    [self ax_viewWillAppear:animated];
-
+    __weak typeof(self) weakSelf = self;
+    
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
+        
+        __strong typeof(self) self = weakSelf;
         
         self.ax_prefix = NSStringFromClass(self.class);
         NSString *viewId = [@"" stringByAppendingFormat:@"%@_VIEW",self.ax_prefix];
@@ -77,6 +79,8 @@
         
         [self ax_scanView:self.view];
     });
+    
+    [self ax_viewDidLayoutSubviews];
 }
 
 #pragma mark - Public Utils

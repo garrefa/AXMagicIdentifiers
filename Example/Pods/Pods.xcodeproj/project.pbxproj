@@ -139,6 +139,7 @@
 		A2318F211EE4A0C96C5EB54B /* KWAny.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F9C42FAD681F6FFE3DD9CC3 /* KWAny.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		A363C4A8E5B99D6963ECDE05 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F226EC1100B867E2F570C3F /* Foundation.framework */; };
 		A5C1CFD4771C2E23258F2836 /* KWMock.m in Sources */ = {isa = PBXBuildFile; fileRef = E9E42276CF9F995227238114 /* KWMock.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		ACDA38BC1AFE78A3006710B4 /* UITableViewController+MagicId.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDA38BB1AFE78A3006710B4 /* UITableViewController+MagicId.m */; };
 		AE081575C28C35187D6BFB68 /* KWValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 98B0534EBD775DFBE3C062E3 /* KWValue.h */; };
 		AE2DCD84566E09C0AA214B4B /* KWWorkarounds.m in Sources */ = {isa = PBXBuildFile; fileRef = A8EC11ECF1302EE3FA355D2C /* KWWorkarounds.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		AE6E2008A7B73E5923630B32 /* Pods-Tests-FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA695AFB37C7D61E8F87F8F /* Pods-Tests-FBSnapshotTestCase-dummy.m */; };
@@ -425,6 +426,9 @@
 		A9639CAF7F15FFE1E0C1CC35 /* KWConformToProtocolMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWConformToProtocolMatcher.h; path = Classes/Matchers/KWConformToProtocolMatcher.h; sourceTree = "<group>"; };
 		AA1B8B367C25F905FF2319E5 /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/UIImage+Compare.m"; sourceTree = "<group>"; };
 		AAFF13FAF9BE68451F3ECA8A /* NSInvocation+KiwiAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSInvocation+KiwiAdditions.h"; path = "Classes/Core/NSInvocation+KiwiAdditions.h"; sourceTree = "<group>"; };
+		ACDA38BA1AFE78A3006710B4 /* UITableViewController+MagicId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewController+MagicId.h"; sourceTree = "<group>"; };
+		ACDA38BB1AFE78A3006710B4 /* UITableViewController+MagicId.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+MagicId.m"; sourceTree = "<group>"; };
+		ACDA38BD1AFE7A40006710B4 /* AXMagicIdentifiers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AXMagicIdentifiers.h; sourceTree = "<group>"; };
 		AF788843C361BCC76D383C12 /* KWValue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWValue.m; path = Classes/Core/KWValue.m; sourceTree = "<group>"; };
 		B0724BB3B27B5648554D9790 /* KWHaveMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWHaveMatcher.h; path = Classes/Matchers/KWHaveMatcher.h; sourceTree = "<group>"; };
 		B1C2BC96B1CC06C4D4B0FE51 /* KWBlockNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWBlockNode.h; path = Classes/Nodes/KWBlockNode.h; sourceTree = "<group>"; };
@@ -663,8 +667,11 @@
 		8A17C83E22C55D6625713C8D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				ACDA38BD1AFE7A40006710B4 /* AXMagicIdentifiers.h */,
 				51D3E6577FEAF31BABC9EA89 /* UIViewController+MagicId.h */,
 				86EDCDB3CA5985ACA8D1FE11 /* UIViewController+MagicId.m */,
+				ACDA38BA1AFE78A3006710B4 /* UITableViewController+MagicId.h */,
+				ACDA38BB1AFE78A3006710B4 /* UITableViewController+MagicId.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1371,6 +1378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACDA38BC1AFE78A3006710B4 /* UITableViewController+MagicId.m in Sources */,
 				5C1F9E5E1A81C63676D5C805 /* Pods-AXMagicIdentifiers-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
