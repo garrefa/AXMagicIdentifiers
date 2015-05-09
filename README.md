@@ -11,6 +11,8 @@ Top level views will have accessibilityIdentifiers set as 'CLASS_NAME'_VIEW .
 
 All buttons inside main view or any subview will have accessibilityIdentifiers set as 'CLASS_NAME'_BUTTON_'BUTTON_TITLE'.
 
+Supports iOS >= 7.0
+
 ## Installation
 
 AXMagicIdentifiers is available through [CocoaPods](http://cocoapods.org). To install
@@ -19,6 +21,10 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "AXMagicIdentifiers"
 ```
+
+## Next Releases
+
+Support for UITextFields, UISwitches, UITableViewCells, UICollectionViewCells, UIPickerView and other elements in the way.
 
 ## Author
 
