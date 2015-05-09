@@ -1,6 +1,6 @@
 # AXMagicIdentifiers
 
-[![CI Status](http://img.shields.io/travis/Alexandre Garrefa/AXMagicIdentifiers.svg?style=flat)](https://travis-ci.org/Alexandre Garrefa/AXMagicIdentifiers)
+[![CI Status](http://img.shields.io/travis/garrefa/AXMagicIdentifiers.svg?style=flat)](https://travis-ci.org/garrefa/AXMagicIdentifiers)
 [![Version](https://img.shields.io/cocoapods/v/AXMagicIdentifiers.svg?style=flat)](http://cocoapods.org/pods/AXMagicIdentifiers)
 [![License](https://img.shields.io/cocoapods/l/AXMagicIdentifiers.svg?style=flat)](http://cocoapods.org/pods/AXMagicIdentifiers)
 [![Platform](https://img.shields.io/cocoapods/p/AXMagicIdentifiers.svg?style=flat)](http://cocoapods.org/pods/AXMagicIdentifiers)
