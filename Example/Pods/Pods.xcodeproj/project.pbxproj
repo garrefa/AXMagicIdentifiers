@@ -185,6 +185,7 @@
 		AAAECA13AE1F2B0EADE43B2A /* KWCountType.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CBC4CFC2C075BAE501C6215 /* KWCountType.h */; };
 		AADD696374B1EF40DE587DAC /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 1226B436B2F6DE0009613EAE /* UIImage+Diff.h */; };
 		ABF2D15252F8D2930B894A8F /* UITextField+MagicId.m in Sources */ = {isa = PBXBuildFile; fileRef = BA53956217B628721511A9D7 /* UITextField+MagicId.m */; };
+		AC4020901AFFC19C00B48ABD /* UITextView+MagicId.m in Sources */ = {isa = PBXBuildFile; fileRef = AC40208F1AFFC19C00B48ABD /* UITextView+MagicId.m */; };
 		AC43732D95C7B224E0A9EB2B /* KWAfterEachNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 9801065282A0C6B50B34087B /* KWAfterEachNode.h */; };
 		AD477BCC37F675CA87D58384 /* KWBlockRaiseMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 93B27F7D1AB0DAF52220575E /* KWBlockRaiseMatcher.h */; };
 		AE09BC6A204A06C86967E12F /* KWProbe.h in Headers */ = {isa = PBXBuildFile; fileRef = 50C027F28500FB4425A909D4 /* KWProbe.h */; };
@@ -480,6 +481,8 @@
 		A8E7B4FDA878CCADCACB1193 /* UINavigationController+MagicId.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+MagicId.h"; sourceTree = "<group>"; };
 		AA52CFB905C3A34D316687D9 /* KWMatcherFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWMatcherFactory.h; path = Classes/Core/KWMatcherFactory.h; sourceTree = "<group>"; };
 		AB1307C552B7C04C5DB2C7A2 /* KWGenericMatchingAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWGenericMatchingAdditions.h; path = Classes/Matchers/KWGenericMatchingAdditions.h; sourceTree = "<group>"; };
+		AC40208E1AFFC19C00B48ABD /* UITextView+MagicId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+MagicId.h"; sourceTree = "<group>"; };
+		AC40208F1AFFC19C00B48ABD /* UITextView+MagicId.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+MagicId.m"; sourceTree = "<group>"; };
 		ADD26A30BFD83F7333A48981 /* KWBeMemberOfClassMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWBeMemberOfClassMatcher.h; path = Classes/Matchers/KWBeMemberOfClassMatcher.h; sourceTree = "<group>"; };
 		AE3C3F0F5170EE832882DA17 /* KWInequalityMatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KWInequalityMatcher.m; path = Classes/Matchers/KWInequalityMatcher.m; sourceTree = "<group>"; };
 		AE99065F816FE11AC728959F /* KWNotificationMatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KWNotificationMatcher.h; path = Classes/Matchers/KWNotificationMatcher.h; sourceTree = "<group>"; };
@@ -690,25 +693,24 @@
 		4A30511D59F4172C6819EE89 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AC40208D1AFFC13B00B48ABD /* TODO */,
 				2943467DB20D2205AE202E8E /* AXMagicIdentifiers.h */,
 				5372B02EADD6D216B89CB817 /* UIButton+MagicId.h */,
 				DC87BF1BA1E1A241134181FB /* UIButton+MagicId.m */,
 				C76B76635E30E868F32EA1F2 /* UICollectionViewController+MagicId.h */,
 				C4B669F9696705A9C141BA22 /* UICollectionViewController+MagicId.m */,
-				A8E7B4FDA878CCADCACB1193 /* UINavigationController+MagicId.h */,
-				F78695094F7FFC9A6144911E /* UINavigationController+MagicId.m */,
 				4897A179EFA9F5720E0F9C89 /* UIPageControl+MagicId.h */,
 				D879504069CC85632996DFF2 /* UIPageControl+MagicId.m */,
 				3F185D42F2C22932B0BA33B8 /* UIPickerView+MagicId.h */,
 				2FBEC96F7BBB250081B7E12A /* UIPickerView+MagicId.m */,
 				612C6212C8D987A979A5C08B /* UISwitch+MagicId.h */,
 				1513C122ACC0B965A23F100E /* UISwitch+MagicId.m */,
-				764E88874DA9075DFAB1EF20 /* UITabBarController+MagicId.h */,
-				0BA1EB5A85F01435B1680491 /* UITabBarController+MagicId.m */,
 				D36ED44482B4E4D860C12329 /* UITableViewController+MagicId.h */,
 				D87D1CA486133F35F2C43888 /* UITableViewController+MagicId.m */,
 				1462BEBDE101135C6F13214F /* UITextField+MagicId.h */,
 				BA53956217B628721511A9D7 /* UITextField+MagicId.m */,
+				AC40208E1AFFC19C00B48ABD /* UITextView+MagicId.h */,
+				AC40208F1AFFC19C00B48ABD /* UITextView+MagicId.m */,
 				95D835A21A22C33B17571BBE /* UIView+MagicId.h */,
 				D01B99D9E979100DC377028D /* UIView+MagicId.m */,
 				2E74BC612CA075888537AAA6 /* UIViewController+MagicId.h */,
@@ -945,6 +947,17 @@
 				89C7B10FEAB1C1EF4D34A9D8 /* Products */,
 				8DA6DAD5932E69FA039EBD1E /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		AC40208D1AFFC13B00B48ABD /* TODO */ = {
+			isa = PBXGroup;
+			children = (
+				764E88874DA9075DFAB1EF20 /* UITabBarController+MagicId.h */,
+				0BA1EB5A85F01435B1680491 /* UITabBarController+MagicId.m */,
+				A8E7B4FDA878CCADCACB1193 /* UINavigationController+MagicId.h */,
+				F78695094F7FFC9A6144911E /* UINavigationController+MagicId.m */,
+			);
+			name = TODO;
 			sourceTree = "<group>";
 		};
 		AF2C097A1573D52C49193FE5 /* Support Files */ = {
@@ -1493,6 +1506,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC4020901AFFC19C00B48ABD /* UITextView+MagicId.m in Sources */,
 				2DA5708220C5FCB15796860B /* Pods-AXMagicIdentifiers-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
