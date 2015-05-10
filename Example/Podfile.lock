@@ -1,5 +1,5 @@
 PODS:
-  - AXMagicIdentifiers (0.1.2)
+  - AXMagicIdentifiers (0.1.3)
   - FBSnapshotTestCase (1.8.1)
   - Kiwi (2.3.1)
 
@@ -13,7 +13,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AXMagicIdentifiers: efebadf040943310f1e1ac51e8d913d83d88bcf7
+  AXMagicIdentifiers: c4c28f549beaf4f525bf2fda5984e042665c1265
   FBSnapshotTestCase: 3dc3899168747a0319c5278f5b3445c13a6532dd
   Kiwi: f038a6c61f7a9e4d7766bff5717aa3b3fdb75f55
 

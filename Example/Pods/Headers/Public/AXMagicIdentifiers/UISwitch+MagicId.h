@@ -1,0 +1,1 @@
+../../../../../Pod/Classes/UISwitch+MagicId.h
