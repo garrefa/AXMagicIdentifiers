@@ -33,8 +33,7 @@ pod "AXMagicIdentifiers"
 
 ## Next Releases
 
-- Support for UITextFields, UISwitches, UICollectionViewCells, UIPickerView and other elements in the way.
-- Updated accID if button text changes
+- Support for UITextFields, UISwitches, UIPickerView and other elements in the way.
 
 ## Author
 
