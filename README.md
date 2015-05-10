@@ -16,8 +16,9 @@ What this does:
 - ax_printAccessibilityIdentifiers: Util method for UIViewController and subclasses to print all accIDs in the view hierarchy.
 - Top levem UIViews have accID set as 'CLASS_NAME'_VIEW.
 - UIButtons have accID set as 'CLASS_NAME'_BUTTON_'BUTTON_TITLE'.
+- UIButtons will auto update accID when button title changes.
 - UITableViewCells have accID set as 'CLASS_NAME'_CELL_S'SECTION_NUMBER'R'ROW_NUMBER'.
-
+- UICollectionViewCells have accID set as 'CLASS_NAME'_CELL_S'SECTION_NUMBER'R'ROW_NUMBER'.
 
 Supports iOS >= 7.0
 

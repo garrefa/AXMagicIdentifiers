@@ -7,25 +7,11 @@
 //
 
 #import "UIViewController+MagicId.h"
-
+#import "UIButton+MagicId.h"
+#import "UIView+MagicId.h"
 #import <objc/runtime.h>
 
-@implementation UIViewController (_MagicId)
-
-- (NSString *)ax_prefix {
-    
-    return (NSString *)objc_getAssociatedObject(self, @selector(ax_prefix));
-}
-
-- (void)ax_setPrefix:(NSString *)ax_prefix {
-    
-    objc_setAssociatedObject(self, @selector(ax_prefix), ax_prefix, OBJC_ASSOCIATION_COPY_NONATOMIC);
-}
-
-@end
-
 @implementation UIViewController (MagicId)
-@dynamic ax_prefix;
 
 + (void)load {
     
@@ -60,11 +46,11 @@
 
 - (void)ax_viewDidLayoutSubviews {
         
-    self.ax_prefix = NSStringFromClass(self.class);
-    NSString *viewId = [@"" stringByAppendingFormat:@"%@_VIEW",self.ax_prefix];
+    NSString *prefix = NSStringFromClass(self.class);
+    NSString *viewId = [@"" stringByAppendingFormat:@"%@_VIEW",prefix];
     self.view.accessibilityIdentifier = viewId;
     
-    [self ax_scanView:self.view];
+    [self.view ax_addAccIds];
     
     [self ax_viewDidLayoutSubviews];
 }
@@ -78,23 +64,6 @@
 }
 
 #pragma mark - Private Utils
-
-- (void)ax_scanView:(UIView *)view {
-    
-    for (id obj in view.subviews) {
-        
-        if([obj isKindOfClass:UIButton.class]) [self ax_idToButton:obj];
-        else if([obj isKindOfClass:UIView.class]) [self ax_scanView:obj];
-    }
-}
-
-- (void)ax_idToButton:(UIButton *)button {
-
-    NSString *title = button.titleLabel.text;
-    title = [title stringByReplacingOccurrencesOfString:@" " withString:@"_"];
-    button.accessibilityIdentifier =
-    [@"" stringByAppendingFormat:@"%@_BUTTON_%@",self.ax_prefix,title];
-}
 
 - (void)ax_printAccessibilityIdentifiersInView:(UIView *)view {
     

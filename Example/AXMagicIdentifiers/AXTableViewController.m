@@ -12,7 +12,14 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSLog(@"acc: %@",cell.accessibilityIdentifier);
+    NSLog(@"accID: %@",cell.accessibilityIdentifier);
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [self ax_printAccessibilityIdentifiers];
+    UITableViewCell *cell = [self tableView:tableView cellForRowAtIndexPath:indexPath];
+    NSLog(@"accID: %@",cell.accessibilityIdentifier);
 }
 
 @end

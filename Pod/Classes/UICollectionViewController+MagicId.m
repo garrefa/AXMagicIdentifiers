@@ -1,17 +1,17 @@
 //
-//  UITableViewController+MagicId.m
+//  UICollectionViewController+MagicId.m
 //  Pods
 //
-//  Created by Alexandre Garrefa on 5/9/15.
+//  Created by Alexandre Garrefa on 5/10/15.
 //
 //
 
-#import "UITableViewController+MagicId.h"
+#import "UICollectionViewController+MagicId.h"
 #import "UIViewController+MagicId.h"
 #import "UIView+MagicId.h"
 #import <objc/runtime.h>
 
-@implementation UITableViewController (MagicId)
+@implementation UICollectionViewController (MagicId)
 
 + (void)load {
     
@@ -19,8 +19,8 @@
     dispatch_once(&onceToken, ^{
         Class class = [self class];
         
-        SEL originalSelector = @selector(tableView:cellForRowAtIndexPath:);
-        SEL swizzledSelector = @selector(ax_tableView:cellForRowAtIndexPath:);
+        SEL originalSelector = @selector(collectionView:cellForItemAtIndexPath:);
+        SEL swizzledSelector = @selector(ax_collectionView:cellForItemAtIndexPath:);
         
         Method originalMethod = class_getInstanceMethod(class, originalSelector);
         Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
@@ -44,9 +44,9 @@
 
 #pragma mark - Method Swizzling
 
-- (UITableViewCell *)ax_tableView:(UITableView *)tableView
-            cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-
+- (UICollectionViewCell *)ax_collectionView:(UICollectionView *)collectionView
+                     cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
     __weak typeof(self) weakSelf = self;
     
     static dispatch_once_t onceToken;
@@ -59,9 +59,8 @@
         self.view.accessibilityIdentifier = viewId;
     });
     
-    UITableViewCell *cell =
-    [self ax_tableView:tableView cellForRowAtIndexPath:indexPath];
-
+    UICollectionViewCell *cell = [self ax_collectionView:collectionView cellForItemAtIndexPath:indexPath];
+    
     NSString *prefix = NSStringFromClass(self.class);
     
     cell.accessibilityIdentifier =

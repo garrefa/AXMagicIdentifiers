@@ -10,7 +10,7 @@
 
 @implementation AXBtnsViewController
 
-- (IBAction)btnPressed:(id)sender {
+- (IBAction)btnPressed:(UIButton *)button {
     
     [self ax_printAccessibilityIdentifiers];
 }
