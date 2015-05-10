@@ -7,7 +7,20 @@
 //
 
 #import "UIPickerView+MagicId.h"
+#import "UIView+MagicId.h"
 
 @implementation UIPickerView (MagicId)
+
+static NSNumber *idsCounter = 0;
+
+#pragma mark - Public Utils
+
+- (void)ax_addAccId {
+    
+    idsCounter = @(idsCounter.integerValue + 1);
+    NSString *tag = idsCounter.stringValue;
+    self.accessibilityIdentifier =
+    [@"" stringByAppendingFormat:@"%@_PVIEW_%@",self.ax_prefix,tag];
+}
 
 @end

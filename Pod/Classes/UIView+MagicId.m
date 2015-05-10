@@ -7,9 +7,10 @@
 //
 
 #import "UIView+MagicId.h"
-#import "UIButton+MagicId.h"
 
 @implementation UIView (MagicId)
+
+#pragma mark - Public Utils
 
 - (NSString *)ax_prefix {
     
@@ -20,13 +21,26 @@
     return NSStringFromClass([obj class]);
 }
 
-- (void)ax_addAccIds {
+- (void)ax_addAccId {
     
     for (id obj in self.subviews) {
         
-        if([obj isKindOfClass:UIButton.class]) [((UIButton *)obj) ax_addAccIdToButton];
-        else if([obj isKindOfClass:UIView.class]) [((UIView *)obj) ax_addAccIds];
+        if ([obj respondsToSelector:@selector(ax_addAccId)]) {
+            [obj performSelector:@selector(ax_addAccId)];
+        }
     }
+}
+
+#pragma mark - Private Utils
+
+- (BOOL)obj:(id)obj isKindOfAnyClassInArray:(NSArray *)classes {
+    
+    for (Class aClass in classes) {
+        
+        if([obj isKindOfClass:aClass]) return TRUE;
+    }
+    
+    return FALSE;
 }
 
 @end

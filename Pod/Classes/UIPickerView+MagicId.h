@@ -10,4 +10,6 @@
 
 @interface UIPickerView (MagicId)
 
+- (void)ax_addAccId;
+
 @end

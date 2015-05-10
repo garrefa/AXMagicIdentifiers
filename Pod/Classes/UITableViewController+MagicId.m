@@ -67,7 +67,7 @@
     cell.accessibilityIdentifier =
     [prefix stringByAppendingFormat:@"_CELL_S%ldR%ld",(long)indexPath.section,(long)indexPath.row];
     
-    [cell.contentView ax_addAccIds];
+    [cell.contentView ax_addAccId];
     
     return cell;
 }

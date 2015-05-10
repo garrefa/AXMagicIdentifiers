@@ -10,4 +10,6 @@
 
 @interface UIPageControl (MagicId)
 
+- (void)ax_addAccId;
+
 @end

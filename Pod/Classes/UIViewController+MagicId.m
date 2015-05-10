@@ -50,7 +50,7 @@
     NSString *viewId = [@"" stringByAppendingFormat:@"%@_VIEW",prefix];
     self.view.accessibilityIdentifier = viewId;
     
-    [self.view ax_addAccIds];
+    [self.view ax_addAccId];
     
     [self ax_viewDidLayoutSubviews];
 }

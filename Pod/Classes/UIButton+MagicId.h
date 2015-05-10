@@ -10,6 +10,6 @@
 
 @interface UIButton (MagicId)
 
-- (void)ax_addAccIdToButton;
+- (void)ax_addAccId;
 
 @end

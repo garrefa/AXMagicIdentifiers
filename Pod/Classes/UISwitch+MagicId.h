@@ -10,4 +10,6 @@
 
 @interface UISwitch (MagicId)
 
+- (void)ax_addAccId;
+
 @end

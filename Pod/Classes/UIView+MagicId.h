@@ -12,6 +12,6 @@
 
 - (NSString *)ax_prefix;
 
-- (void)ax_addAccIds;
+- (void)ax_addAccId;
 
 @end

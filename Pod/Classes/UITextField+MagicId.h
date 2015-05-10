@@ -10,4 +10,6 @@
 
 @interface UITextField (MagicId)
 
+- (void)ax_addAccId;
+
 @end

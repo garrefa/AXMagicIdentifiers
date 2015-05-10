@@ -7,7 +7,20 @@
 //
 
 #import "UIPageControl+MagicId.h"
+#import "UIView+MagicId.h"
 
 @implementation UIPageControl (MagicId)
+
+static NSNumber *idsCounter = 0;
+
+#pragma mark - Public Utils
+
+- (void)ax_addAccId {
+    
+    idsCounter = @(idsCounter.integerValue + 1);
+    NSString *tag = idsCounter.stringValue;
+    self.accessibilityIdentifier =
+    [@"" stringByAppendingFormat:@"%@_PAGEC_%@",self.ax_prefix,tag];
+}
 
 @end

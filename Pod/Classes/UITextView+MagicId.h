@@ -10,4 +10,6 @@
 
 @interface UITextView (MagicId)
 
+- (void)ax_addAccId;
+
 @end

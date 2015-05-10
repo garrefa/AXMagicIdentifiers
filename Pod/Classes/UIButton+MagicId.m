@@ -46,12 +46,12 @@
 - (void)ax_setTitle:(NSString *)title forState:(UIControlState)state {
 
     [self ax_setTitle:title forState:state];
-    [self ax_addAccIdToButton];
+    [self ax_addAccId];
 }
 
 #pragma mark - Public Utils
 
-- (void)ax_addAccIdToButton {
+- (void)ax_addAccId {
     
     NSString *title = self.titleLabel.text;
     title = [title stringByReplacingOccurrencesOfString:@" " withString:@"_"];

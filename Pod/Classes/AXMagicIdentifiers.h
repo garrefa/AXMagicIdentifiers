@@ -13,6 +13,10 @@
 #import "UITableViewController+MagicId.h"
 #import "UICollectionViewController+MagicId.h"
 #import "UIButton+MagicId.h"
+#import "UIPickerView+MagicId.h"
+#import "UISwitch+MagicId.h"
+#import "UITextField+MagicId.h"
+#import "UIPageControl+MagicId.h"
 #import "UIView+MagicId.h"
 
 #endif
