@@ -7,7 +7,7 @@
 
 ## Usage
 
-Just do import the magical header in your pch file and you are done.
+Just import the magical header in your pch file and you are done.
 
 ```ruby
 #import <AXMagicIdentifiers.h>
