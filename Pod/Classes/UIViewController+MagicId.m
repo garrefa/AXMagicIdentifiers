@@ -59,20 +59,12 @@
 #pragma mark - Method Swizzling
 
 - (void)ax_viewDidLayoutSubviews {
+        
+    self.ax_prefix = NSStringFromClass(self.class);
+    NSString *viewId = [@"" stringByAppendingFormat:@"%@_VIEW",self.ax_prefix];
+    self.view.accessibilityIdentifier = viewId;
     
-    __weak typeof(self) weakSelf = self;
-    
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        
-        __strong typeof(self) self = weakSelf;
-        
-        self.ax_prefix = NSStringFromClass(self.class);
-        NSString *viewId = [@"" stringByAppendingFormat:@"%@_VIEW",self.ax_prefix];
-        self.view.accessibilityIdentifier = viewId;
-        
-        [self ax_scanView:self.view];
-    });
+    [self ax_scanView:self.view];
     
     [self ax_viewDidLayoutSubviews];
 }
