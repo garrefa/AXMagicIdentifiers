@@ -1,5 +1,6 @@
 PODS:
-  - AXMagicIdentifiers (1.0.0)
+  - AXMagicIdentifiers (1.0.1):
+    - JRSwizzle (~> 1.0)
   - FBSnapshotTestCase (1.8.1)
   - JRSwizzle (1.0)
   - Kiwi (2.3.1)
@@ -15,7 +16,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AXMagicIdentifiers: 14df1477bd84f9bb0d80afbd771f0de13fd8f2c0
+  AXMagicIdentifiers: 61ac05986228dbbf83be4c32b28f410c94ef691c
   FBSnapshotTestCase: 3dc3899168747a0319c5278f5b3445c13a6532dd
   JRSwizzle: dd5ead5d913a0f29e7f558200165849f006bb1e3
   Kiwi: f038a6c61f7a9e4d7766bff5717aa3b3fdb75f55

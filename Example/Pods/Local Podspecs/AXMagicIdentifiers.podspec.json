@@ -1,7 +1,7 @@
 {
   "name": "AXMagicIdentifiers",
-  "version": "1.0.0",
-  "summary": "UIViewController category that automagically adds accessibility identifiers to top level views and all UIButtons.",
+  "version": "1.0.1",
+  "summary": "Categories that automagically adds accessibility identifiers to key objects for test automation",
   "homepage": "https://github.com/garrefa/AXMagicIdentifiers",
   "license": "MIT",
   "authors": {
@@ -9,7 +9,7 @@
   },
   "source": {
     "git": "https://github.com/garrefa/AXMagicIdentifiers.git",
-    "tag": "1.0.0"
+    "tag": "1.0.1"
   },
   "social_media_url": "https://twitter.com/alexmrg",
   "platforms": {
@@ -23,5 +23,10 @@
     ]
   },
   "public_header_files": "Pod/Classes/*.h",
-  "frameworks": "UIKit"
+  "frameworks": "UIKit",
+  "dependencies": {
+    "JRSwizzle": [
+      "~> 1.0"
+    ]
+  }
 }

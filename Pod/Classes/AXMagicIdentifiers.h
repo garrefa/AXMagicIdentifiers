@@ -9,10 +9,10 @@
 #ifndef Pods_AXMagicIdentifiers_h
 #define Pods_AXMagicIdentifiers_h
 
-#import "UICollectionViewController+MagicId.h"
 #import "UIViewController+MagicId.h"
 
 #import "UIButton+MagicId.h"
+#import "UICollectionView+MagicId.h"
 #import "UIPageControl+MagicId.h"
 #import "UIPickerView+MagicId.h"
 #import "UISwitch+MagicId.h"
