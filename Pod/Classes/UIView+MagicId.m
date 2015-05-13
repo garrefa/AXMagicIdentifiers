@@ -31,16 +31,4 @@
     }
 }
 
-#pragma mark - Private Utils
-
-- (BOOL)obj:(id)obj isKindOfAnyClassInArray:(NSArray *)classes {
-    
-    for (Class aClass in classes) {
-        
-        if([obj isKindOfClass:aClass]) return TRUE;
-    }
-    
-    return FALSE;
-}
-
 @end

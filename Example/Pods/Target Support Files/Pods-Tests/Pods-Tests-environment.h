@@ -8,9 +8,9 @@
 
 // AXMagicIdentifiers
 #define COCOAPODS_POD_AVAILABLE_AXMagicIdentifiers
-#define COCOAPODS_VERSION_MAJOR_AXMagicIdentifiers 0
-#define COCOAPODS_VERSION_MINOR_AXMagicIdentifiers 1
-#define COCOAPODS_VERSION_PATCH_AXMagicIdentifiers 3
+#define COCOAPODS_VERSION_MAJOR_AXMagicIdentifiers 1
+#define COCOAPODS_VERSION_MINOR_AXMagicIdentifiers 0
+#define COCOAPODS_VERSION_PATCH_AXMagicIdentifiers 0
 
 // FBSnapshotTestCase
 #define COCOAPODS_POD_AVAILABLE_FBSnapshotTestCase

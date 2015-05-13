@@ -7,9 +7,10 @@
 //
 
 #import "UIViewController+MagicId.h"
-#import "UIButton+MagicId.h"
 #import "UIView+MagicId.h"
+
 #import <objc/runtime.h>
+#import <JRSwizzle/JRSwizzle.h>
 
 @implementation UIViewController (MagicId)
 
@@ -17,38 +18,23 @@
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
+
         Class class = [self class];
         
-        SEL originalSelector = @selector(viewDidLayoutSubviews);
-        SEL swizzledSelector = @selector(ax_viewDidLayoutSubviews);
-        
-        Method originalMethod = class_getInstanceMethod(class, originalSelector);
-        Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
-        
-        BOOL didAddMethod =
-        class_addMethod(class,
-                        originalSelector,
-                        method_getImplementation(swizzledMethod),
-                        method_getTypeEncoding(swizzledMethod));
-        
-        if (didAddMethod) {
-            class_replaceMethod(class,
-                                swizzledSelector,
-                                method_getImplementation(originalMethod),
-                                method_getTypeEncoding(originalMethod));
-        } else {
-            method_exchangeImplementations(originalMethod, swizzledMethod);
-        }
+        [class jr_swizzleMethod:@selector(viewDidLayoutSubviews)
+                     withMethod:@selector(ax_viewDidLayoutSubviews) error:nil];
     });
 }
 
 #pragma mark - Method Swizzling
 
 - (void)ax_viewDidLayoutSubviews {
-        
-    NSString *prefix = NSStringFromClass(self.class);
-    NSString *viewId = [@"" stringByAppendingFormat:@"%@_VIEW",prefix];
-    self.view.accessibilityIdentifier = viewId;
+    
+    if(!self.view.accessibilityIdentifier) {
+        NSString *prefix = NSStringFromClass(self.class);
+        NSString *viewId = [@"" stringByAppendingFormat:@"%@_VIEW",prefix];
+        self.view.accessibilityIdentifier = viewId;
+    }
     
     [self.view ax_addAccId];
     

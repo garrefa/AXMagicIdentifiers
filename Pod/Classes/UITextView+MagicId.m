@@ -17,6 +17,7 @@ static NSNumber *idsCounter = 0;
 
 - (void)ax_addAccId {
     
+    if (self.accessibilityIdentifier) return;
     idsCounter = @(idsCounter.integerValue + 1);
     NSString *tag = idsCounter.stringValue;
     self.accessibilityIdentifier =

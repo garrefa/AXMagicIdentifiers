@@ -8,7 +8,9 @@
 
 #import "UIButton+MagicId.h"
 #import "UIView+MagicId.h"
+
 #import <objc/runtime.h>
+#import <JRSwizzle/JRSwizzle.h>
 
 @implementation UIButton (MagicId)
 
@@ -16,28 +18,11 @@
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
+        
         Class class = [self class];
         
-        SEL originalSelector = @selector(setTitle:forState:);
-        SEL swizzledSelector = @selector(ax_setTitle:forState:);
-        
-        Method originalMethod = class_getInstanceMethod(class, originalSelector);
-        Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
-        
-        BOOL didAddMethod =
-        class_addMethod(class,
-                        originalSelector,
-                        method_getImplementation(swizzledMethod),
-                        method_getTypeEncoding(swizzledMethod));
-        
-        if (didAddMethod) {
-            class_replaceMethod(class,
-                                swizzledSelector,
-                                method_getImplementation(originalMethod),
-                                method_getTypeEncoding(originalMethod));
-        } else {
-            method_exchangeImplementations(originalMethod, swizzledMethod);
-        }
+        [class jr_swizzleMethod:@selector(setTitle:forState:)
+                     withMethod:@selector(ax_setTitle:forState:) error:nil];
     });
 }
 

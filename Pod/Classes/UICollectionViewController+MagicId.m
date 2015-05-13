@@ -9,7 +9,9 @@
 #import "UICollectionViewController+MagicId.h"
 #import "UIViewController+MagicId.h"
 #import "UIView+MagicId.h"
+
 #import <objc/runtime.h>
+#import <JRSwizzle/JRSwizzle.h>
 
 @implementation UICollectionViewController (MagicId)
 
@@ -17,28 +19,11 @@
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
+
         Class class = [self class];
         
-        SEL originalSelector = @selector(collectionView:cellForItemAtIndexPath:);
-        SEL swizzledSelector = @selector(ax_collectionView:cellForItemAtIndexPath:);
-        
-        Method originalMethod = class_getInstanceMethod(class, originalSelector);
-        Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
-        
-        BOOL didAddMethod =
-        class_addMethod(class,
-                        originalSelector,
-                        method_getImplementation(swizzledMethod),
-                        method_getTypeEncoding(swizzledMethod));
-        
-        if (didAddMethod) {
-            class_replaceMethod(class,
-                                swizzledSelector,
-                                method_getImplementation(originalMethod),
-                                method_getTypeEncoding(originalMethod));
-        } else {
-            method_exchangeImplementations(originalMethod, swizzledMethod);
-        }
+        [class jr_swizzleMethod:@selector(collectionView:cellForItemAtIndexPath:)
+                     withMethod:@selector(ax_collectionView:cellForItemAtIndexPath:) error:nil];
     });
 }
 
@@ -52,19 +37,23 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
-        __strong typeof(self) self = weakSelf;
+        __strong typeof(weakSelf) self = weakSelf;
         
-        NSString *prefix = NSStringFromClass(self.class);
-        NSString *viewId = [@"" stringByAppendingFormat:@"%@_VIEW",prefix];
-        self.view.accessibilityIdentifier = viewId;
+        if (!self.view.accessibilityIdentifier) {
+            NSString *prefix = NSStringFromClass(self.class);
+            NSString *viewId = [@"" stringByAppendingFormat:@"%@_VIEW",prefix];
+            self.view.accessibilityIdentifier = viewId;
+        }
     });
     
     UICollectionViewCell *cell = [self ax_collectionView:collectionView cellForItemAtIndexPath:indexPath];
     
-    NSString *prefix = NSStringFromClass(self.class);
-    
-    cell.contentView.accessibilityIdentifier =
-    [prefix stringByAppendingFormat:@"_CELL_S%ldR%ld",(long)indexPath.section,(long)indexPath.row];
+    if(!cell.contentView.accessibilityIdentifier) {
+        NSString *prefix = NSStringFromClass(self.class);
+        
+        cell.contentView.accessibilityIdentifier =
+        [prefix stringByAppendingFormat:@"_CELL_S%ldI%ld",(long)indexPath.section,(long)indexPath.item];
+    }
     
     [cell.contentView ax_addAccId];    
     

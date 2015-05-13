@@ -29,6 +29,8 @@ What this does:
 - UIPickerView have accID set as 'CLASS_NAME'_PVIEW_'INDEX'.
 - UISwitch have accID set as 'CLASS_NAME'_SWITCH_'INDEX'.
 
+- Wont change accID if already set unless its a UIButton where button text changes.
+
 Supports iOS >= 7.0
 
 ## Installation
@@ -39,10 +41,6 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "AXMagicIdentifiers"
 ```
-
-## Next Releases
-
-- Support for UITextFields, UISwitches, UIPickerView and other elements in the way.
 
 ## Author
 
