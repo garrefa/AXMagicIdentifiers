@@ -23,6 +23,7 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		AC0CCFAA1B02A1BA00CC135E /* AXViewControllerWithTable.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0CCFA91B02A1BA00CC135E /* AXViewControllerWithTable.m */; };
 		AC0CCFAD1B03CBC400CC135E /* AXTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0CCFAC1B03CBC400CC135E /* AXTableViewCell.m */; };
+		AC0CCFB61B03F62900CC135E /* AXOtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0CCFB51B03F62900CC135E /* AXOtherViewController.m */; };
 		ACDA38B31AFE5F6E006710B4 /* Main.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACDA38B21AFE5F6E006710B4 /* Main.Storyboard */; };
 		ACDA38B91AFE7047006710B4 /* AXBtnsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDA38B81AFE7047006710B4 /* AXBtnsViewController.m */; };
 		ACDA38C01AFE7D02006710B4 /* AXTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDA38BF1AFE7D02006710B4 /* AXTableViewController.m */; };
@@ -66,6 +67,8 @@
 		AC0CCFA91B02A1BA00CC135E /* AXViewControllerWithTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXViewControllerWithTable.m; sourceTree = "<group>"; };
 		AC0CCFAB1B03CBC400CC135E /* AXTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXTableViewCell.h; sourceTree = "<group>"; };
 		AC0CCFAC1B03CBC400CC135E /* AXTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXTableViewCell.m; sourceTree = "<group>"; };
+		AC0CCFB41B03F62900CC135E /* AXOtherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXOtherViewController.h; sourceTree = "<group>"; };
+		AC0CCFB51B03F62900CC135E /* AXOtherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXOtherViewController.m; sourceTree = "<group>"; };
 		ACDA38B21AFE5F6E006710B4 /* Main.Storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.Storyboard; sourceTree = "<group>"; };
 		ACDA38B71AFE7047006710B4 /* AXBtnsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXBtnsViewController.h; sourceTree = "<group>"; };
 		ACDA38B81AFE7047006710B4 /* AXBtnsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXBtnsViewController.m; sourceTree = "<group>"; };
@@ -143,6 +146,8 @@
 				6003F59D195388D20070C39A /* AXAppDelegate.m */,
 				ACDA38B71AFE7047006710B4 /* AXBtnsViewController.h */,
 				ACDA38B81AFE7047006710B4 /* AXBtnsViewController.m */,
+				AC0CCFB41B03F62900CC135E /* AXOtherViewController.h */,
+				AC0CCFB51B03F62900CC135E /* AXOtherViewController.m */,
 				AC0CCFA81B02A1BA00CC135E /* AXViewControllerWithTable.h */,
 				AC0CCFA91B02A1BA00CC135E /* AXViewControllerWithTable.m */,
 				ACDA38BE1AFE7D02006710B4 /* AXTableViewController.h */,
@@ -376,6 +381,7 @@
 				AC0CCFAA1B02A1BA00CC135E /* AXViewControllerWithTable.m in Sources */,
 				6003F59E195388D20070C39A /* AXAppDelegate.m in Sources */,
 				ACDA38C01AFE7D02006710B4 /* AXTableViewController.m in Sources */,
+				AC0CCFB61B03F62900CC135E /* AXOtherViewController.m in Sources */,
 				AC0CCFAD1B03CBC400CC135E /* AXTableViewCell.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);

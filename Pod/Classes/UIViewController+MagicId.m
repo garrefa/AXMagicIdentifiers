@@ -55,9 +55,11 @@
     
     for (id obj in view.subviews) {
         
-        if([obj isKindOfClass:UIButton.class])
-            NSLog(@"accID: %@",((UIButton *)obj).accessibilityIdentifier);
-        else if([obj isKindOfClass:UIView.class])
+        if ([obj respondsToSelector:@selector(accessibilityIdentifier)]) {
+            NSLog(@"accID: %@",[obj performSelector:@selector(accessibilityIdentifier)]);
+        }
+        
+        if([obj isKindOfClass:UIView.class])
             [self ax_printAccessibilityIdentifiersInView:obj];
     }
 }

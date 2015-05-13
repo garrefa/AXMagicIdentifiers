@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--TableVC2-->
         <scene sceneID="LAA-U0-oHx">
             <objects>
                 <viewController id="Cwm-ge-PXs" customClass="AXViewControllerWithTable" sceneMemberID="viewController">
@@ -60,14 +60,14 @@
                             <constraint firstAttribute="bottom" secondItem="WDr-z5-MPB" secondAttribute="bottom" id="pv1-Gj-C7S"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="eyS-2A-sZO"/>
+                    <tabBarItem key="tabBarItem" title="TableVC2" id="eyS-2A-sZO"/>
                     <connections>
                         <outlet property="tableView" destination="WDr-z5-MPB" id="guo-Y3-cLU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yLP-rU-mP4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1989" y="165"/>
+            <point key="canvasLocation" x="-2179" y="165"/>
         </scene>
         <!--Table-->
         <scene sceneID="bDk-M6-3o2">
@@ -324,7 +324,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wlo-G0-JkA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1169" y="-270"/>
+            <point key="canvasLocation" x="-1783" y="165"/>
         </scene>
         <!--BTNS View-->
         <scene sceneID="68Y-hd-JzB">
@@ -377,9 +377,20 @@
                                                     <action selector="btnPressed:" destination="uAh-x8-7aP" eventType="touchUpInside" id="d8v-bS-qUa"/>
                                                 </connections>
                                             </button>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="text field" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b9h-gx-jcg">
+                                                <rect key="frame" x="8" y="56" width="256" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="Xw2-3w-G15"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="b9h-gx-jcg" firstAttribute="leading" secondItem="ydZ-1S-qSP" secondAttribute="leading" constant="8" id="DB7-Hq-iX0"/>
+                                            <constraint firstItem="b9h-gx-jcg" firstAttribute="top" secondItem="hI5-uj-cJR" secondAttribute="bottom" constant="18" id="Fgi-4f-EpN"/>
+                                            <constraint firstAttribute="trailing" secondItem="b9h-gx-jcg" secondAttribute="trailing" constant="8" id="S74-ld-cUs"/>
                                             <constraint firstAttribute="trailing" secondItem="hI5-uj-cJR" secondAttribute="trailing" constant="8" id="Xyf-LF-SuZ"/>
                                             <constraint firstItem="hI5-uj-cJR" firstAttribute="leading" secondItem="ydZ-1S-qSP" secondAttribute="leading" constant="8" id="qJg-rx-Sk8"/>
                                             <constraint firstItem="hI5-uj-cJR" firstAttribute="top" secondItem="ydZ-1S-qSP" secondAttribute="top" constant="8" id="yqr-ne-goR"/>
@@ -403,10 +414,10 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="GCA-JE-zDj" secondAttribute="trailing" constant="8" id="Aza-fT-D9v"/>
                             <constraint firstItem="UlG-Ld-JmR" firstAttribute="leading" secondItem="BmZ-6W-Ggv" secondAttribute="leading" constant="16" id="Czw-CR-aaJ"/>
-                            <constraint firstItem="GCA-JE-zDj" firstAttribute="top" secondItem="gXt-cx-RDH" secondAttribute="bottom" constant="30" id="czV-XO-26I"/>
+                            <constraint firstItem="GCA-JE-zDj" firstAttribute="top" secondItem="gXt-cx-RDH" secondAttribute="bottom" constant="30" id="KYK-dq-wZ5"/>
+                            <constraint firstItem="4yh-RT-zvl" firstAttribute="top" secondItem="UlG-Ld-JmR" secondAttribute="bottom" constant="27" id="SqR-7p-84V"/>
                             <constraint firstItem="GCA-JE-zDj" firstAttribute="leading" secondItem="BmZ-6W-Ggv" secondAttribute="leading" constant="8" id="nrn-XA-zlX"/>
                             <constraint firstAttribute="trailing" secondItem="UlG-Ld-JmR" secondAttribute="trailing" constant="16" id="ogZ-N3-1AJ"/>
-                            <constraint firstItem="4yh-RT-zvl" firstAttribute="top" secondItem="UlG-Ld-JmR" secondAttribute="bottom" constant="27" id="t9P-6V-Wic"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="BTNS View" id="EcR-sX-IcC"/>
@@ -415,6 +426,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JVU-sW-YQ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1169" y="-911"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="xOP-zF-Oif">
+            <objects>
+                <viewController id="pRj-3l-S8l" customClass="AXOtherViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qMY-IP-80B"/>
+                        <viewControllerLayoutGuide type="bottom" id="mvh-63-lRR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1WF-DB-6ne">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="text field 1" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fpB-kH-oDc">
+                                <rect key="frame" x="60" y="88" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="2gQ-ZR-Fcm"/>
+                                    <constraint firstAttribute="height" constant="30" id="L1m-t4-hMW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="text field 2" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JmB-C4-EXi">
+                                <rect key="frame" x="60" y="137" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="PLU-ET-GGa"/>
+                                    <constraint firstAttribute="height" constant="30" id="cDH-MD-cZK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phJ-wl-VAy">
+                                <rect key="frame" x="100" y="35" width="120" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="sRj-pr-0Bd"/>
+                                </constraints>
+                                <state key="normal" title="Other Button">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnPressed:" destination="pRj-3l-S8l" eventType="touchUpInside" id="RgH-FQ-ND8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="phJ-wl-VAy" firstAttribute="top" secondItem="qMY-IP-80B" secondAttribute="bottom" constant="15" id="BTZ-zv-wIi"/>
+                            <constraint firstAttribute="centerX" secondItem="phJ-wl-VAy" secondAttribute="centerX" id="Mgh-DC-mYM"/>
+                            <constraint firstItem="JmB-C4-EXi" firstAttribute="top" secondItem="fpB-kH-oDc" secondAttribute="bottom" constant="19" id="aHU-1e-et5"/>
+                            <constraint firstAttribute="centerX" secondItem="fpB-kH-oDc" secondAttribute="centerX" id="jeG-6D-9UT"/>
+                            <constraint firstAttribute="centerX" secondItem="JmB-C4-EXi" secondAttribute="centerX" id="pcg-Dd-Fox"/>
+                            <constraint firstItem="fpB-kH-oDc" firstAttribute="top" secondItem="phJ-wl-VAy" secondAttribute="bottom" constant="23" id="r5Y-D8-vPF"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="ped-iQ-0Ve"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rp3-zU-RSy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1169" y="-267"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="mJm-VW-Q8b">
@@ -431,6 +503,7 @@
                         <segue destination="uAh-x8-7aP" kind="relationship" relationship="viewControllers" id="1hh-Cf-cEC"/>
                         <segue destination="FOe-Kf-rr0" kind="relationship" relationship="viewControllers" id="siV-bF-fTu"/>
                         <segue destination="Cwm-ge-PXs" kind="relationship" relationship="viewControllers" id="fbp-sN-3Le"/>
+                        <segue destination="pRj-3l-S8l" kind="relationship" relationship="viewControllers" id="aTh-l3-nOn"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flH-gY-RY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
