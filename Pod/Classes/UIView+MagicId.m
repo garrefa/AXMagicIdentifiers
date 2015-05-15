@@ -12,13 +12,18 @@
 
 #pragma mark - Public Utils
 
-- (NSString *)ax_prefix {
+- (UIViewController *)ax_ViewController {
     
     id obj = self.nextResponder;
     while([obj isKindOfClass:UIView.class]) {
         obj = ((UIView *)obj).nextResponder;
     }
-    return NSStringFromClass([obj class]);
+    return obj;
+}
+
+- (NSString *)ax_prefix {
+    
+    return [@"AX_" stringByAppendingString:NSStringFromClass(self.ax_ViewController.class)];
 }
 
 - (void)ax_addAccId {

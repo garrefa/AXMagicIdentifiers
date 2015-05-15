@@ -12,6 +12,32 @@
 #import <objc/runtime.h>
 #import <JRSwizzle/JRSwizzle.h>
 
+@interface UIViewController (_MagicId)
+
+@property (nonatomic, weak, setter = ax_setIdsCountDictionary:) NSDictionary *ax_idsCountDictionary;
+
+@end
+
+@implementation UIViewController (_MagicId)
+
+@dynamic ax_idsCountDictionary;
+
+#pragma mark - Add Associated Objects
+
+- (void)ax_setIdsCountDictionary:(NSDictionary *)ax_idsCountDictionary {
+    
+    objc_setAssociatedObject(self, @selector(ax_idsCountDictionary), ax_idsCountDictionary, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
+- (NSDictionary *)ax_idsCountDictionary {
+    
+    return objc_getAssociatedObject(self, @selector(ax_idsCountDictionary));
+}
+
+@end
+
+
+
 @implementation UIViewController (MagicId)
 
 + (void)load {
@@ -47,6 +73,19 @@
     
     NSLog(@"accID: %@",self.view.accessibilityIdentifier);
     [self ax_printAccessibilityIdentifiersInView:self.view];
+}
+
+- (NSString *)ax_nextAccessibilityIdentifierIndexForInstanceOfClass:(Class)class {
+    
+    NSString *key = NSStringFromClass(class);
+    NSMutableDictionary *dic =
+    [NSMutableDictionary dictionaryWithDictionary:self.ax_idsCountDictionary];
+    NSNumber *count = dic[key];
+    if (count) count = @(count.integerValue+1);
+    else count = @(1);
+    [dic setObject:count forKey:key];
+    self.ax_idsCountDictionary = dic;
+    return count.stringValue;
 }
 
 #pragma mark - Private Utils

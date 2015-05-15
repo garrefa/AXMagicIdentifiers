@@ -11,5 +11,6 @@
 @interface UIViewController (MagicId)
 
 - (void)ax_printAccessibilityIdentifiers;
+- (NSString *)ax_nextAccessibilityIdentifierIndexForInstanceOfClass:(Class)class;
 
 @end

@@ -38,10 +38,12 @@
 
 - (void)ax_addAccId {
     
-    NSString *title = self.titleLabel.text;
-    title = [title stringByReplacingOccurrencesOfString:@" " withString:@"_"];
-    self.accessibilityIdentifier =
-    [@"" stringByAppendingFormat:@"%@_BUTTON_%@",self.ax_prefix,title];
+    if (!self.accessibilityIdentifier.length || [self.accessibilityIdentifier hasPrefix:@"AX_"]) {
+        NSString *title = self.titleLabel.text;
+        title = [title stringByReplacingOccurrencesOfString:@" " withString:@"_"];
+        self.accessibilityIdentifier =
+        [@"" stringByAppendingFormat:@"%@_BUTTON_%@",self.ax_prefix,title];
+    }
 }
 
 @end
