@@ -20,13 +20,19 @@
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
-		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		AC0CCFAA1B02A1BA00CC135E /* AXViewControllerWithTable.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0CCFA91B02A1BA00CC135E /* AXViewControllerWithTable.m */; };
 		AC0CCFAD1B03CBC400CC135E /* AXTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0CCFAC1B03CBC400CC135E /* AXTableViewCell.m */; };
 		AC0CCFB61B03F62900CC135E /* AXOtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC0CCFB51B03F62900CC135E /* AXOtherViewController.m */; };
+		ACA4857C1B0925C30026232D /* UIButtonSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = ACA4857B1B0925C30026232D /* UIButtonSpec.m */; };
+		ACA4857E1B092A280026232D /* UIViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = ACA4857D1B092A280026232D /* UIViewControllerSpec.m */; };
 		ACDA38B31AFE5F6E006710B4 /* Main.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACDA38B21AFE5F6E006710B4 /* Main.Storyboard */; };
 		ACDA38B91AFE7047006710B4 /* AXBtnsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDA38B81AFE7047006710B4 /* AXBtnsViewController.m */; };
 		ACDA38C01AFE7D02006710B4 /* AXTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDA38BF1AFE7D02006710B4 /* AXTableViewController.m */; };
+		ACED01011B0944E800785C19 /* UIPageControlSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = ACED01001B0944E800785C19 /* UIPageControlSpec.m */; };
+		ACED01031B09465700785C19 /* UIPickerViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = ACED01021B09465700785C19 /* UIPickerViewSpec.m */; };
+		ACED01051B09473600785C19 /* UISwitchSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = ACED01041B09473600785C19 /* UISwitchSpec.m */; };
+		ACED01071B0947AC00785C19 /* UITextFieldSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = ACED01061B0947AC00785C19 /* UITextFieldSpec.m */; };
+		ACED01091B09482600785C19 /* UITextViewSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = ACED01081B09482600785C19 /* UITextViewSpec.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +66,6 @@
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		A3E34BCDBCA867A56CDACF58 /* Pods-Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.release.xcconfig"; sourceTree = "<group>"; };
 		AC0CCFA81B02A1BA00CC135E /* AXViewControllerWithTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXViewControllerWithTable.h; sourceTree = "<group>"; };
@@ -69,11 +74,18 @@
 		AC0CCFAC1B03CBC400CC135E /* AXTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXTableViewCell.m; sourceTree = "<group>"; };
 		AC0CCFB41B03F62900CC135E /* AXOtherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXOtherViewController.h; sourceTree = "<group>"; };
 		AC0CCFB51B03F62900CC135E /* AXOtherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXOtherViewController.m; sourceTree = "<group>"; };
+		ACA4857B1B0925C30026232D /* UIButtonSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIButtonSpec.m; sourceTree = "<group>"; };
+		ACA4857D1B092A280026232D /* UIViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewControllerSpec.m; sourceTree = "<group>"; };
 		ACDA38B21AFE5F6E006710B4 /* Main.Storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.Storyboard; sourceTree = "<group>"; };
 		ACDA38B71AFE7047006710B4 /* AXBtnsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXBtnsViewController.h; sourceTree = "<group>"; };
 		ACDA38B81AFE7047006710B4 /* AXBtnsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXBtnsViewController.m; sourceTree = "<group>"; };
 		ACDA38BE1AFE7D02006710B4 /* AXTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXTableViewController.h; sourceTree = "<group>"; };
 		ACDA38BF1AFE7D02006710B4 /* AXTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXTableViewController.m; sourceTree = "<group>"; };
+		ACED01001B0944E800785C19 /* UIPageControlSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPageControlSpec.m; sourceTree = "<group>"; };
+		ACED01021B09465700785C19 /* UIPickerViewSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIPickerViewSpec.m; sourceTree = "<group>"; };
+		ACED01041B09473600785C19 /* UISwitchSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISwitchSpec.m; sourceTree = "<group>"; };
+		ACED01061B0947AC00785C19 /* UITextFieldSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextFieldSpec.m; sourceTree = "<group>"; };
+		ACED01081B09482600785C19 /* UITextViewSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITextViewSpec.m; sourceTree = "<group>"; };
 		CAC7C2062C320AF09513947B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		CE7930FE8A70B9128D9AA84C /* Pods-Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tests/Pods-Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D8FD0B2D32406D3B9DBFA9D5 /* Pods-AXMagicIdentifiers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AXMagicIdentifiers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AXMagicIdentifiers/Pods-AXMagicIdentifiers.debug.xcconfig"; sourceTree = "<group>"; };
@@ -175,8 +187,14 @@
 		6003F5B5195388D20070C39A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				6003F5BB195388D20070C39A /* Tests.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
+				ACA4857B1B0925C30026232D /* UIButtonSpec.m */,
+				ACED01001B0944E800785C19 /* UIPageControlSpec.m */,
+				ACED01021B09465700785C19 /* UIPickerViewSpec.m */,
+				ACED01041B09473600785C19 /* UISwitchSpec.m */,
+				ACED01061B0947AC00785C19 /* UITextFieldSpec.m */,
+				ACED01081B09482600785C19 /* UITextViewSpec.m */,
+				ACA4857D1B092A280026232D /* UIViewControllerSpec.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -391,7 +409,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+				ACA4857C1B0925C30026232D /* UIButtonSpec.m in Sources */,
+				ACED01051B09473600785C19 /* UISwitchSpec.m in Sources */,
+				ACED01071B0947AC00785C19 /* UITextFieldSpec.m in Sources */,
+				ACED01091B09482600785C19 /* UITextViewSpec.m in Sources */,
+				ACA4857E1B092A280026232D /* UIViewControllerSpec.m in Sources */,
+				ACED01011B0944E800785C19 /* UIPageControlSpec.m in Sources */,
+				ACED01031B09465700785C19 /* UIPickerViewSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
