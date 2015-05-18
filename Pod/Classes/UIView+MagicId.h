@@ -10,10 +10,10 @@
 
 @interface UIView (MagicId)
 
-- (UIViewController *)ax_ViewController;
-
 - (NSString *)ax_prefix;
 
 - (void)ax_addAccId;
+
+- (NSString *)ax_accessibilityIdentifierTag;
 
 @end

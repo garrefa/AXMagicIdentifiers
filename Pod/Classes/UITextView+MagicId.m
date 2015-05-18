@@ -17,8 +17,7 @@
 - (void)ax_addAccId {
     
     if (self.accessibilityIdentifier) return;
-    NSString *tag =
-    [self.ax_ViewController ax_nextAccessibilityIdentifierIndexForInstanceOfClass:self.class];
+    NSString *tag = [self ax_accessibilityIdentifierTag];
     self.accessibilityIdentifier =
     [@"" stringByAppendingFormat:@"%@_TXTVIEW_%@",self.ax_prefix,tag];
 }

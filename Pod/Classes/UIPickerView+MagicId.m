@@ -19,8 +19,7 @@ static NSNumber *idsCounter = 0;
 - (void)ax_addAccId {
     
     if (self.accessibilityIdentifier) return;
-    NSString *tag =
-    [self.ax_ViewController ax_nextAccessibilityIdentifierIndexForInstanceOfClass:self.class];
+    NSString *tag = [self ax_accessibilityIdentifierTag];
     self.accessibilityIdentifier =
     [@"" stringByAppendingFormat:@"%@_PVIEW_%@",self.ax_prefix,tag];
 }

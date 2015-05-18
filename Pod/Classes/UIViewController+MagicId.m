@@ -40,32 +40,26 @@
 
 @implementation UIViewController (MagicId)
 
-+ (void)load {
-    
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
+//+ (void)load {
+//    
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//
+//        Class class = [self class];
+//        
+//        [class jr_swizzleMethod:@selector(viewDidLoad)
+//                     withMethod:@selector(ax_viewDidLoad) error:nil];
+//    });
+//}
 
-        Class class = [self class];
-        
-        [class jr_swizzleMethod:@selector(viewDidLayoutSubviews)
-                     withMethod:@selector(ax_viewDidLayoutSubviews) error:nil];
-    });
-}
-
-#pragma mark - Method Swizzling
-
-- (void)ax_viewDidLayoutSubviews {
-    
-    if(!self.view.accessibilityIdentifier) {
-        NSString *prefix = NSStringFromClass(self.class);
-        NSString *viewId = [@"" stringByAppendingFormat:@"%@_VIEW",prefix];
-        self.view.accessibilityIdentifier = viewId;
-    }
-    
-    [self.view ax_addAccId];
-    
-    [self ax_viewDidLayoutSubviews];
-}
+//#pragma mark - Method Swizzling
+//
+//- (void)ax_viewDidLoad {
+//    
+//    [self ax_addAccId];
+//    
+//    [self ax_viewDidLoad];
+//}
 
 #pragma mark - Public Utils
 
@@ -75,7 +69,7 @@
     [self ax_printAccessibilityIdentifiersInView:self.view];
 }
 
-- (NSString *)ax_nextAccessibilityIdentifierIndexForInstanceOfClass:(Class)class {
+- (NSString *)ax_accessibilityIdentifierTagForInstanceOfClass:(Class)class {
     
     NSString *key = NSStringFromClass(class);
     NSMutableDictionary *dic =
@@ -86,6 +80,16 @@
     [dic setObject:count forKey:key];
     self.ax_idsCountDictionary = dic;
     return count.stringValue;
+}
+
+- (void)ax_addAccId {
+    
+    if(!self.view.accessibilityIdentifier) {
+        NSString *viewId = [@"" stringByAppendingFormat:@"%@_VIEW",self.view.ax_prefix];
+        self.view.accessibilityIdentifier = viewId;
+    }
+    
+    [self.view ax_addAccId];
 }
 
 #pragma mark - Private Utils

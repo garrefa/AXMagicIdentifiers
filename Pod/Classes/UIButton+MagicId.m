@@ -8,8 +8,6 @@
 
 #import "UIButton+MagicId.h"
 #import "UIView+MagicId.h"
-
-#import <objc/runtime.h>
 #import <JRSwizzle/JRSwizzle.h>
 
 @implementation UIButton (MagicId)
@@ -31,7 +29,7 @@
 - (void)ax_setTitle:(NSString *)title forState:(UIControlState)state {
 
     [self ax_setTitle:title forState:state];
-    [self ax_addAccId];
+    [self performSelector:@selector(ax_addAccId) withObject:nil afterDelay:0.5];
 }
 
 #pragma mark - Public Utils
