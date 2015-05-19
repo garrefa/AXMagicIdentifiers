@@ -53,7 +53,10 @@
 
 - (NSString *)ax_prefix {
     
-    return [@"AX_" stringByAppendingString:NSStringFromClass(self.ax_ViewController.class)];
+    UIViewController *vc = [self ax_ViewController];
+    NSString *vcClass = NSStringFromClass(vc.class);
+    if (!vcClass) vcClass = @"";
+    return [@"AX_" stringByAppendingString:vcClass];
 }
 
 - (void)ax_addAccId {
