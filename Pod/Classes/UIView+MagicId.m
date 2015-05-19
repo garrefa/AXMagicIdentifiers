@@ -43,10 +43,12 @@
     return [vc ax_accessibilityIdentifierTagForInstanceOfClass:self.class];
 }
 
-- (UIViewController *)ax_ViewController {
+- (id)ax_ViewController {
     
     id obj = self.nextResponder;
-    while([obj isKindOfClass:UIView.class]) {
+    while([obj isKindOfClass:UIView.class] &&
+          ![obj isKindOfClass:UITableViewCell.class] &&
+          ![obj isKindOfClass:UICollectionViewCell.class] ) {
         obj = ((UIView *)obj).nextResponder;
     }
     return obj;
@@ -54,7 +56,10 @@
 
 - (NSString *)ax_prefix {
     
-    return [@"AX_" stringByAppendingString:NSStringFromClass(self.ax_ViewController.class)];
+    UIViewController *vc = [self ax_ViewController];
+    NSString *vcClass = NSStringFromClass(vc.class);
+    if (!vcClass) vcClass = @"";
+    return [@"AX_" stringByAppendingString:vcClass];
 }
 
 - (void)ax_addAccId {

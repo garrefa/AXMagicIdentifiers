@@ -40,27 +40,6 @@
 
 @implementation UIViewController (MagicId)
 
-//+ (void)load {
-//    
-//    static dispatch_once_t onceToken;
-//    dispatch_once(&onceToken, ^{
-//
-//        Class class = [self class];
-//        
-//        [class jr_swizzleMethod:@selector(viewDidLoad)
-//                     withMethod:@selector(ax_viewDidLoad) error:nil];
-//    });
-//}
-
-//#pragma mark - Method Swizzling
-//
-//- (void)ax_viewDidLoad {
-//    
-//    [self ax_addAccId];
-//    
-//    [self ax_viewDidLoad];
-//}
-
 #pragma mark - Public Utils
 
 - (void)ax_printAccessibilityIdentifiers {

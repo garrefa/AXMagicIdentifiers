@@ -17,7 +17,6 @@ From now on, lets call accessibilityIdentifier property as accID.
 
 What this does:
 
-- ax_printAccessibilityIdentifiers: Util method for UIViewController and subclasses to print all accIDs in the view hierarchy.
 - Top levem UIViews have accID set as 'CLASS_NAME'_VIEW.
 - UITableViewCells have accID set as 'CLASS_NAME'_CELL_S'SECTION_NUMBER'R'ROW_NUMBER'.
 - UICollectionViewCells have accID set as 'CLASS_NAME'_CELL_S'SECTION_NUMBER'R'ROW_NUMBER'.
@@ -29,7 +28,7 @@ What this does:
 - UIPickerView have accID set as 'CLASS_NAME'_PVIEW_'INDEX'.
 - UISwitch have accID set as 'CLASS_NAME'_SWITCH_'INDEX'.
 
-- Wont change accID if already set unless its a UIButton where button text changes.
+- Wont change accID if already set.
 
 Supports iOS >= 7.0
 
