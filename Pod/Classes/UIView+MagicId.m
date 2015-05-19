@@ -42,10 +42,12 @@
     return [vc ax_accessibilityIdentifierTagForInstanceOfClass:self.class];
 }
 
-- (UIViewController *)ax_ViewController {
+- (id)ax_ViewController {
     
     id obj = self.nextResponder;
-    while([obj isKindOfClass:UIView.class]) {
+    while([obj isKindOfClass:UIView.class] &&
+          ![obj isKindOfClass:UITableViewCell.class] &&
+          ![obj isKindOfClass:UICollectionViewCell.class] ) {
         obj = ((UIView *)obj).nextResponder;
     }
     return obj;
