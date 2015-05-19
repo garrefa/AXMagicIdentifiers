@@ -29,7 +29,7 @@ What this does:
 - UIPickerView have accID set as 'CLASS_NAME'_PVIEW_'INDEX'.
 - UISwitch have accID set as 'CLASS_NAME'_SWITCH_'INDEX'.
 
-- Wont change accID if already set unless its a UIButton where button text changes.
+- Wont change accID if already set.
 
 Supports iOS >= 7.0
 
