@@ -39,6 +39,7 @@
 - (NSString *)ax_accessibilityIdentifierTag {
 
     UIViewController *vc = [self ax_ViewController];
+    if(![vc isKindOfClass:UIViewController.class]) return @"1";
     return [vc ax_accessibilityIdentifierTagForInstanceOfClass:self.class];
 }
 
