@@ -10,9 +10,12 @@
 **Please, update to version 1.0.6. Older versions had a bug where some delegate methods for UITableViews and UICollectionViews were not being called.**
 
 Just import the magical header in your pch file and you are done.
+Keep in mind that this pod should not be used in production release.
 
 ```ruby
+#ifdef DEBUG
 #import <AXMagicIdentifiers.h>
+#endif
 ```
 
 ## What this does:
