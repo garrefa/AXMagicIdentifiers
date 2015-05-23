@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "AXMagicIdentifiers"
-  s.version          = "1.0.4"
+  s.version          = "1.0.6"
   s.summary          = "Categories that automagically adds accessibility identifiers to key objects for test automation"
   s.homepage         = "https://github.com/garrefa/AXMagicIdentifiers"
   s.license          = 'MIT'

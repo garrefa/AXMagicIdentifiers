@@ -7,15 +7,17 @@
 
 ## Usage
 
+**Please, update to version 1.0.6. Older versions had a bug where some delegate methods for UITableViews and UICollectionViews were not being called.**
+
 Just import the magical header in your pch file and you are done.
 
 ```ruby
 #import <AXMagicIdentifiers.h>
 ```
 
-From now on, lets call accessibilityIdentifier property as accID.
+## What this does:
 
-What this does:
+From now on, lets call accessibilityIdentifier property as accID.
 
 - Top levem UIViews have accID set as 'CLASS_NAME'_VIEW.
 - UITableViewCells have accID set as 'CLASS_NAME'_CELL_S'SECTION_NUMBER'R'ROW_NUMBER'.
