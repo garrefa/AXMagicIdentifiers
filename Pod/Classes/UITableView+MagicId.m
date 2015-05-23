@@ -108,9 +108,9 @@
 
 - (void)ax_setDataSource:(id<UITableViewDataSource>)dataSource {
     
-    [self ax_setDataSource:self];
-    
     self.ax_realDataSource = dataSource;
+    
+    [self ax_setDataSource:self];
 }
 
 @end
