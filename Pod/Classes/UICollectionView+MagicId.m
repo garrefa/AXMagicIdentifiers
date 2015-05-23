@@ -108,9 +108,9 @@
 
 - (void)ax_setDataSource:(id<UICollectionViewDataSource>)dataSource {
     
-    [self ax_setDataSource:self];
-    
     self.ax_realDataSource = dataSource;
+    
+    [self ax_setDataSource:self];
 }
 
 @end
