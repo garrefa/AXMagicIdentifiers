@@ -13,9 +13,7 @@ Just import the magical header in your pch file and you are done.
 Keep in mind that this pod should not be used in production release.
 
 ```ruby
-#ifdef DEBUG
 #import <AXMagicIdentifiers.h>
-#endif
 ```
 
 ## What this does:
@@ -43,7 +41,7 @@ AXMagicIdentifiers is available through [CocoaPods](http://cocoapods.org). To in
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "AXMagicIdentifiers"
+pod "AXMagicIdentifiers", :configuration => ['Debug']
 ```
 
 ## Author
