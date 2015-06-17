@@ -14,7 +14,7 @@
 #import "UIButton+MagicId.h"
 #import "UICollectionView+MagicId.h"
 #import "UIPageControl+MagicId.h"
-#import "UIPickerView+MagicId.h"
+//#import "UIPickerView+MagicId.h"
 #import "UISwitch+MagicId.h"
 #import "UITableView+MagicId.h"
 #import "UITextField+MagicId.h"

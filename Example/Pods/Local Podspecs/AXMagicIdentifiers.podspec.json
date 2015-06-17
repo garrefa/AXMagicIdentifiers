@@ -1,6 +1,6 @@
 {
   "name": "AXMagicIdentifiers",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "summary": "Categories that automagically adds accessibility identifiers to key objects for test automation",
   "homepage": "https://github.com/garrefa/AXMagicIdentifiers",
   "license": "MIT",
@@ -9,7 +9,7 @@
   },
   "source": {
     "git": "https://github.com/garrefa/AXMagicIdentifiers.git",
-    "tag": "1.0.6"
+    "tag": "1.0.7"
   },
   "social_media_url": "https://twitter.com/alexmrg",
   "platforms": {
