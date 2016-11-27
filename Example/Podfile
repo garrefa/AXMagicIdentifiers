@@ -1,0 +1,13 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'AXMagicIdentifiers', :exclusive => true do
+  pod "AXMagicIdentifiers", :path => "../"
+  pod 'JRSwizzle', '~> 1.0'
+end
+
+target 'Tests', :exclusive => true do
+  pod "AXMagicIdentifiers", :path => "../"
+
+  pod 'Kiwi'
+  pod 'FBSnapshotTestCase'
+end
