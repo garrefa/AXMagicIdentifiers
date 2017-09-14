@@ -8,7 +8,7 @@
 
 #import "UIView+MagicId.h"
 #import "UIViewController+MagicId.h"
-#import <JRSwizzle.h>
+#import <JRSwizzle/JRSwizzle.h>
 
 @implementation UIView (MagicId)
 
