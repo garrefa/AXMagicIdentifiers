@@ -3,6 +3,7 @@ Pod::Spec.new do |s|
   s.version      = '1.0.7'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.homepage     = 'https://github.com/garrefa/AXMagicIdentifiers'
+  s.summary      = 'Categories that automagically adds accessibility identifiers to key objects for test automation'
   s.authors      = { 'Alexandre Garrefa' => 'alexmrg@gmail.com' }
   s.source       = { :git => 'https://github.com/leoneparise/iLog.git', :tag => s.version }
   s.social_media_url = 'https://twitter.com/alexmrg'
