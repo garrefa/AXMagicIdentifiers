@@ -13,5 +13,5 @@ Pod::Spec.new do |s|
   s.resource_bundle = { 'AXMagicIdentifiers' => 'Pod/Assets/*.png' }
   s.public_header_files = 'Pod/Classes/*.h'
   s.framework = 'UIKit'
-  s.dependency = 'JRSwizzle', '~> 1.0'
+  s.dependency 'JRSwizzle', '~> 1.0'
 end
